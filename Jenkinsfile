@@ -7,15 +7,17 @@ if (BRANCH_NAME == 'main') {
 
 pipeline {
     agent { label agentLabel }
-        stage('deploy') {
-            when {
-                branch 'dev'
-            }
-            steps {
-                echo 'Deploying....'
-                sh 'cd ./vserver'
-                sh 'docker-compose down'
-                sh 'docker-compose up -d --build'
+        stages {
+            stage('deploy') {
+                when {
+                    branch 'dev'
+                }
+                steps {
+                    echo 'Deploying....'
+                    sh 'cd ./vserver'
+                    sh 'docker-compose down'
+                    sh 'docker-compose up -d --build'
+                }
             }
         }
     }
