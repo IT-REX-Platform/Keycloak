@@ -18,7 +18,6 @@ services:
     volumes:
       - ./realm-config:/opt/jboss/keycloak/realm-config
       - ./../local/keycloak/themes/itrex:/opt/jboss/keycloak/themes/itrex
-
     environment:
       - KEYCLOAK_USER=admin
       - KEYCLOAK_PASSWORD=admin
@@ -32,6 +31,8 @@ services:
       - 9080:9080
       - 9443:9443
       - 10990:10990
+    depends_on:
+      - keycloakdb
     networks:
       - it-rex
       - default
