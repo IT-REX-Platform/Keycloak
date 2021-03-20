@@ -17,6 +17,8 @@ services:
     restart: always
     volumes:
       - ./realm-config:/opt/jboss/keycloak/realm-config
+      - ./keycloak/themes/itrex:/opt/jboss/keycloak/themes/itrex
+
     environment:
       - KEYCLOAK_USER=admin
       - KEYCLOAK_PASSWORD=admin
