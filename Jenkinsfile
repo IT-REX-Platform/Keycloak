@@ -14,10 +14,11 @@ pipeline {
                 }
                 steps {
                     echo 'Deploying....'
-                    sh 'cd ./vserver'
-                    sh 'docker-compose down'
-                    sh 'docker-compose up -d --build'
+                    dir('vserver') {
+                        sh 'docker-compose down'
+                        sh 'docker-compose up -d --build'
+                    }
                 }
             }
         }
-    }
+}
