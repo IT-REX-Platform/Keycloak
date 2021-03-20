@@ -1,0 +1,164 @@
+{
+  "realm": "jhipster",
+  "users": [
+    {
+      "id": "4c973896-5761-41fc-8217-07c5d13a004b",
+      "createdTimestamp": 1505479415590,
+      "username": "jhipster_admin",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Admin",
+      "lastName": "Administrator",
+      "email": "admin@localhost",
+      "credentials": [
+        {
+          "id": "b860462b-9b02-48ba-9523-d3a8926a917b",
+          "type": "password",
+          "createdDate": 1505479429154,
+          "secretData": "{\"value\":\"4pf9K2jWSCcHC+CwsZP/qidN5pSmDUe6AX6wBerSGdBVKkExay8MWKx+EKmaaObZW6FVsD8vdW/ZsyUFD9gJ1Q==\",\"salt\":\"1/qNkZ5kr77jOMOBPBogGw==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["offline_access", "uma_authorization"],
+      "clientRoles": {
+        "account": ["view-profile", "manage-account"]
+      },
+      "notBefore": 0,
+      "groups": ["/Admins", "/Users"]
+    },
+    {
+      "id": "e3ab6777-e2d7-474e-b831-64e785d8be1f",
+      "createdTimestamp": 1576348683889,
+      "username": "service-account-internal",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "serviceAccountClientId": "internal",
+      "credentials": [],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["offline_access", "uma_authorization"],
+      "clientRoles": {
+        "internal": ["uma_protection"],
+        "account": ["view-profile", "manage-account"]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
+      "id": "c4af4e2f-b432-4c3b-8405-cca86cd5b97b",
+      "createdTimestamp": 1505479373742,
+      "username": "jhipster_user",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "",
+      "lastName": "User",
+      "email": "user@localhost",
+      "credentials": [
+        {
+          "id": "7821832b-1e82-45a2-b8d3-f1a6ad909e64",
+          "type": "password",
+          "createdDate": 1505479392766,
+          "secretData": "{\"value\":\"MbKsMgWPnZyImih8s4SaoCSCq+XIY/c6S9F93sXEidHF1TjPWxCqMkec0+o3860CMLXHt3az61cIJOWI0FW9aw==\",\"salt\":\"fmpBI1r8R1u75hDLMUlwBw==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["offline_access", "uma_authorization"],
+      "clientRoles": {
+        "account": ["view-profile", "manage-account"]
+      },
+      "notBefore": 0,
+      "groups": ["/Users"]
+    },
+    {
+      "id": "8ffdfa00-d07c-4c3f-baca-d744f4ad81d9",
+      "createdTimestamp": 1612027427476,
+      "username": "admin",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Alice",
+      "lastName": "Dinosaur",
+      "email": "Alice.Dinosaur@itrex",
+      "credentials": [
+        {
+          "id": "01851ad2-e87d-4bfe-b206-7a30a8bd4e8f",
+          "type": "password",
+          "createdDate": 1612027438241,
+          "secretData": "{\"value\":\"4pf9K2jWSCcHC+CwsZP/qidN5pSmDUe6AX6wBerSGdBVKkExay8MWKx+EKmaaObZW6FVsD8vdW/ZsyUFD9gJ1Q==\",\"salt\":\"1/qNkZ5kr77jOMOBPBogGw==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["offline_access", "uma_authorization"],
+      "clientRoles": {
+        "account": ["view-profile", "manage-account"]
+      },
+      "notBefore": 0,
+      "groups": ["/ITREX_Admins"]
+    },
+    {
+      "id": "dcf3050b-cef8-4e09-b640-1b8e878531b6",
+      "createdTimestamp": 1612027382677,
+      "username": "lecturer",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Bob",
+      "lastName": "Dinosaur",
+      "email": "Bob.Dinosaur@itrex",
+      "credentials": [
+        {
+          "id": "34c3386d-529f-4764-9bc9-2f212a0d7542",
+          "type": "password",
+          "createdDate": 1612027402184,
+          "secretData": "{\"value\":\"raROgxI9ofLVf0jpLa/3i3MpAFW67SWcA9rYIH+NAd51Y6o7rmsfszTsoMV7JKSCYa0TPIz91wNq7MHZAsXoVg==\",\"salt\":\"avEcPZRCLI2ngOCN5PIz8Q==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["offline_access", "uma_authorization"],
+      "clientRoles": {
+        "account": ["view-profile", "manage-account"]
+      },
+      "notBefore": 0,
+      "groups": ["/ITREX_Lecturers"]
+    },
+    {
+      "id": "6684d145-f558-4701-8bfd-ec823237a1c1",
+      "createdTimestamp": 1612027458635,
+      "username": "student",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": true,
+      "firstName": "Charlie",
+      "lastName": "Dinosaur",
+      "email": "Charlie.Dinosaur@itrex",
+      "credentials": [
+        {
+          "id": "d348ab62-54cb-4399-8163-767768394003",
+          "type": "password",
+          "createdDate": 1612027466615,
+          "secretData": "{\"value\":\"CcLsDPOORnVq/4pUAtbwMEDSGLhP2e31lNTHxvWo4LgdH0H4vT13pm29MFTtvKR+Qgro2Yvd32Dvd5CS26n30g==\",\"salt\":\"E9BECrImvtvM+P2rLPBEag==\"}",
+          "credentialData": "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\"}"
+        }
+      ],
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": ["offline_access", "uma_authorization"],
+      "clientRoles": {
+        "account": ["view-profile", "manage-account"]
+      },
+      "notBefore": 0,
+      "groups": ["/ITREX_Students"]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+version: "2"
+services:
+  keycloak:
+    image: jboss/keycloak:10.0.0
+    container_name: keycloak
+    command: [
+        "-b",
+        "0.0.0.0",
+        "-Dkeycloak.migration.action=import",
+        "-Dkeycloak.migration.provider=dir",
+        "-Dkeycloak.migration.dir=/opt/jboss/keycloak/realm-config",
+        # '-Dkeycloak.migration.strategy=OVERWRITE_EXISTING',
+        "-Dkeycloak.migration.strategy=IGNORE_EXISTING",
+        "-Djboss.socket.binding.port-offset=1000",
+        "-Dkeycloak.profile.feature.upload_scripts=enabled",
+      ]
+    restart: always
+    volumes:
+      - ./realm-config:/opt/jboss/keycloak/realm-config
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+      - DB_VENDOR=POSTGRES
+      - DB_ADDR=keycloakdb
+      - DB_DATABASE=keycloak
+      - DB_USER=keycloak
+      - DB_SCHEMA=public
+      - DB_PASSWORD=k3ycl04k
+    ports:
+      - 9080:9080
+      - 9443:9443
+      - 10990:10990
+    networks:
+      - it-rex
+      - default
+
+  keycloakdb:
+    image: postgres:12.3
+    environment:
+      - POSTGRES_USER=keycloak
+      - POSTGRES_PASSWORD=k3ycl04k
+      - POSTGRES_DB=keycloak
+    restart: always
+    networks:
+      - default
+
+networks:
+  it-rex:
+    external: true
