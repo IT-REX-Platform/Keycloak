@@ -1,0 +1,4 @@
+FROM jboss/keycloak:10.0.0
+
+COPY ../local/keycloak/themes/itrex /opt/jboss/keycloak/themes/itrex
+COPY ./realm-config /opt/jboss/keycloak/realm-config
