@@ -14,7 +14,7 @@ pipeline {
                 }
                 steps {
                     echo 'Deploying....'
-                    sh 'docker-compose down'
+                    sh 'docker-compose rm -svf keycloak'
                     sh 'docker-compose up -d --build'
                 }
             }
